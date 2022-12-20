@@ -24,6 +24,18 @@ public class Main {
         printArr(subArr(arr1,arr2));
         System.out.println("Возвращает массив из частных элементов двух входящих массивов");
         printArr(divArr(arr1,arr2));
+        System.out.println("Второй способ");
+        try {
+            System.out.println("Number: " + check(arr1, arr2, n, m));
+        } catch (Exception e){
+            switch (Integer.parseInt(e.getMessage())){
+                case 1 -> System.out.println("Длины массивов не равны");
+                case 2 -> System.out.println("N и M не равны");
+                case 3 -> System.out.println("N меньше нуля");
+                case 4 -> System.out.println("М меньше нуля");
+            }
+        }
+
 
     }
     public static void addArr(int[] arr, Random rnd){
@@ -59,7 +71,21 @@ public class Main {
         }
         return arr3;
     }
-
+    public static boolean check(int[] arr, int[] arr1, int a, int b) throws Exception{
+        if (arr.length != arr1.length){
+            throw new Exception("1");
+        }
+        if (a !=  b){
+            throw new Exception("2");
+        }
+        if (a < 0) {
+            throw new Exception("3");
+        }
+        if (b < 0) {
+            throw new Exception("4");
+        }
+        return true;
+    }
 }
 
 
