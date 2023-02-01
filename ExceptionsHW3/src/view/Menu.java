@@ -11,6 +11,7 @@ public class Menu {
             userSelect = "EMPTY";
             userSelect = scn.inputKey(TextMenu.menu);
             pres.doSomething(userSelect);
+
         }
         scn.scn.close();
         System.out.println("Bye");

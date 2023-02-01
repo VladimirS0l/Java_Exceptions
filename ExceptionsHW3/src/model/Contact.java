@@ -1,6 +1,8 @@
 package model;
 
-public class Contact {
+import java.io.Serializable;
+
+public class Contact implements Serializable {
     private int id;
     private String firstName;
     private String lastName;
@@ -79,8 +81,8 @@ public class Contact {
     public Contact(){};
 
     public String printContact(Contact contact){
-        StringBuilder result = new StringBuilder();
-        result = new StringBuilder("id human: " + contact.id + "\n" + "Firstname human: " + contact.lastName +
+        StringBuilder result;
+        result = new StringBuilder("id human: " + contact.id + "\n" + "Firstname human: " + contact.firstName +
                 "\n" + "LastName human: " + contact.lastName + "\n" + "FatherName human: " + contact.fatherName +
                 "\n" + "Birthday human: " + contact.birthday + "\n" + "Phone human: " + contact.phone +
                 "\n" + "Gender human: " + contact.gender);

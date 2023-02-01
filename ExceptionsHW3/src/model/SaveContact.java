@@ -8,17 +8,17 @@ public class SaveContact {
     public String saveTxt(PhoneBook list, int idMenu) {
         for (int i = 0; i < list.size(); i++) {
             if (list.get(i).getId() == idMenu) {
-                SaveTxt txt = new SaveTxt(this.list);
-                txt.saveAs(list.get(i).toString());
-                return "Записан в txt: " + list.get(i).toString() + "\n";
+                SaveTxt txt= new SaveTxt(this.list);
+                txt.saveAs(list.get(i));
+                return "Записан в txt: " + list.get(i).getFirstName() +" " + list.get(i).getLastName() + "\n";
             }
         }
-        return "Not found";
+        return "Контакт не найден";
     }
 
-    public String loadTxt() {
-        SaveTxt txt = new SaveTxt(list);
-        txt.readbd();
+    public String loadTxt(PhoneBook list) {
+        SaveTxt txt = new SaveTxt();
+        txt.readbd(list);
         return "База данных загружена";
     }
 }

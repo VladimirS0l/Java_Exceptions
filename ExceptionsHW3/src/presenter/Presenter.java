@@ -1,5 +1,6 @@
 package presenter;
 
+import model.Contact;
 import model.PhoneBook;
 import model.Output;
 import view.ConsoleView;
@@ -26,6 +27,6 @@ public class Presenter {
 
     public void addTxt(int id) {ConsoleView.print(output.outputStr(save.saveTxt(list, id)));}
 
-    public void loadDb(){ConsoleView.print(output.outputStr(save.loadTxt()));}
+    public void loadDb(){ConsoleView.print(output.outputStr(save.loadTxt(list)));}
 }
 

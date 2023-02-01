@@ -14,12 +14,12 @@ public class TextMenu {
                        
             """;
 
-    public static String choiceName = "Enter First name: ";
-    public static String choiceLastName = "Enter Last name: ";
-    public static String choiceId = "Enter Id: ";
-    public static String choiceFatherName = "Enter Father name: ";
-    public static String choiceBirthday = "Enter Birthday: ";
-    public static String choicePhone = "Enter Phone: ";
-    public static String choiceGender = "Enter gender: ";
+    public static String choiceName = "Введите имя(Только буквы не более 16  символов): ";
+    public static String choiceLastName = "Введите фамилию(Только буквы не более 16  символов): ";
+    public static String choiceId = "Введите ID контакта: ";
+    public static String choiceFatherName = "Введите отчество(Только буквы не более 16  символов):: ";
+    public static String choiceBirthday = "Введите дату рождения(В формате dd/mm/yyyy: ";
+    public static String choicePhone = "Введите номер(Только числа не более 15 символов): ";
+    public static String choiceGender = "Введите пол (Один символ f или m): ";
 
 }

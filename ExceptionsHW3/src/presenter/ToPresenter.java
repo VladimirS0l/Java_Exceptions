@@ -37,18 +37,19 @@ public class ToPresenter {
                 }
                 String birthday = input.inputKey(TextMenu.choiceBirthday);
                 while (!Check.isValid(birthday)) {
+                    System.out.println("Вы ввели неверное значение");
                     birthday = input.inputKey(TextMenu.choiceBirthday);
                 }
                 int phone = 0;
                 try {
                     phone = Integer.parseInt(input.inputKey(TextMenu.choicePhone));
                 } catch (Exception ex) {
-                    System.out.println("Error");
+                    System.out.println("Вы ввели неверное значение");
                     phone = Integer.parseInt(input.inputKey(TextMenu.choicePhone));
                 }
                 char gender = (input.inputKey(TextMenu.choiceGender)).charAt(0);
                 while (!Check.checkChar(gender)){
-                    System.out.println("Error");
+                    System.out.println("Вы ввели неверное значение");
                     gender = (input.inputKey(TextMenu.choiceGender)).charAt(0);
                 }
                 presenter.addContact(firstName, lastName, fatherName, birthday, phone, gender);
